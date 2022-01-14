@@ -1,0 +1,20 @@
+html * {
+    background-color: black;
+    color:tan;
+    margin-block: 10px;
+    text-align: center;
+    
+}
+
+h3  {
+    font-style: italic;
+    font-size: small;
+}
+
+table {
+    margin-inline: auto;
+}
+
+#prompt {
+    font-size: 5em;;
+}
