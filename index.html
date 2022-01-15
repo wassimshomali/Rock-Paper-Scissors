@@ -12,7 +12,6 @@
 <body>
     <h1>So you come to play, hehehe</h1>
     <h2>It's 50/50 mate, glhf.</h2>
-    <h3>yes, it's 50/50 if you don't count ties</h3>
 
 <button id="resetButton" onclick="resetGame()">reset</button>
 
@@ -26,9 +25,19 @@
             <td id="cpuScore">0</td>
         </tr>
     </table>
-        <button id="rockButton" onclick="rockClick()">rock</button>
-        <button id="paperButton" onclick="paperClick()">paper</button>
-        <button id="scissorsButton" onclick="scissorsClick()">scissors</button>
+    <button id="rockButton" onclick="rockClick()">rock</button>
+    <button id="paperButton" onclick="paperClick()">paper</button>
+    <button id="scissorsButton" onclick="scissorsClick()">scissors</button>
+    <table>
+        <tr>
+            <td>Your pick: </td>
+            <td id="displayUser"></td>
+        </tr>
+        <tr>
+            <td>Computer's pick: </td>
+            <td id="displayCpu"></td>
+        </tr>
+    </table>
         <div id="prompt">pick one</div>
         
 
