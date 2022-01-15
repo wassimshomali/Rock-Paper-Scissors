@@ -18,3 +18,18 @@ table {
 #prompt {
     font-size: 5em;;
 }
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid;
+    transition-duration: .2s;
+
+}
+button:hover {
+    background-color: rgba(210, 180, 140, 0.205);
+}
+button:active {
+    background-color: tan;
+    color: black;
+    transform: translateY(2px);
+}
