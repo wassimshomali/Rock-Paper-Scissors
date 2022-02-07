@@ -1,7 +1,9 @@
+//initializing variables
 let userScore = 0
 let cpuScore = 0
 let gameOver = false
 
+//resets game, occurs when player or cpu reaches 5 or when reset button is clicked
 function resetGame() {
     document.getElementById("userScore").innerHTML = "0"
     document.getElementById("cpuScore").innerHTML = "0"
@@ -12,6 +14,7 @@ function resetGame() {
     gameOver = false
 }
 
+//three following functions are game functions, user plays.
 function rockClick() {
     if (gameOver == true) {
         resetGame()
@@ -20,8 +23,8 @@ function rockClick() {
     console.log("User has selected Rock")
     document.getElementById("displayUser").innerHTML = "Rock"
 
-    cpuCheck(userPick)
-    checkScore()
+    cpuCheck(userPick)  //runs the function for the cpu random gernerator to have a turn and check who wins
+    checkScore()        //function that updates score to see if the game is over or not
 }
 function paperClick() {
     if (gameOver == true) {
@@ -30,6 +33,7 @@ function paperClick() {
     userPick = "Paper"
     console.log("User has selected Paper")
     document.getElementById("displayUser").innerHTML = "Paper"
+
     cpuCheck(userPick)
     checkScore()
 }
@@ -40,10 +44,12 @@ function scissorsClick() {
     userPick = "Scissors"
     console.log("User has selected Scissors")
     document.getElementById("displayUser").innerHTML = "Scissors"
+
     cpuCheck(userPick)
     checkScore()
 }
 
+//function that generates a cpu move and determines who wins the round by allocating points
 function cpuCheck(userPick) {
     let cpuArray = ['Rock', 'Paper', 'Scissors']
     const random = Math.floor(Math.random() * cpuArray.length)
@@ -83,6 +89,7 @@ function cpuCheck(userPick) {
     }
 }
 
+//function that determines the end state of the game and declares the game is over
 function checkScore() {
     console.log("user: " + userScore)
     console.log("computer: " + cpuScore + "\n                -------------------")
@@ -100,16 +107,18 @@ function checkScore() {
         gameOver = true
     }
 }
-
+//adds score to user
 function addUser() {
     userScore++
     document.getElementById("userScore").innerHTML = userScore
 }
+//addds score to cpu
 function addCpu() {
     cpuScore++
     document.getElementById("cpuScore").innerHTML = cpuScore
 
 }
+//prompts after each round win, loss or tie
 function promptWin() {
     document.getElementById("prompt").innerHTML = "You won this round!"
     

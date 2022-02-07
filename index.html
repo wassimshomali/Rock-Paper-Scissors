@@ -10,11 +10,14 @@
 </head>
 
 <body>
+    <!-- header text -->
     <h1>So you come to play, hehehe</h1>
     <h2>It's 50/50 mate, glhf.</h2>
 
+    <!-- reset button  -->
 <button id="resetButton" onclick="resetGame()">reset</button>
 
+<!-- table 1, this shows the live score via their respective id's  -->
     <table>
         <tr>
             <td>Your Score</td>
@@ -25,9 +28,13 @@
             <td id="cpuScore">0</td>
         </tr>
     </table>
+
+    <!-- game buttons, contains game functions  -->
     <button id="rockButton" onclick="rockClick()">rock</button>
     <button id="paperButton" onclick="paperClick()">paper</button>
     <button id="scissorsButton" onclick="scissorsClick()">scissors</button>
+
+    <!-- second table, show's the most recent play from each side -->
     <table>
         <tr>
             <td>Your pick: </td>
@@ -38,6 +45,8 @@
             <td id="displayCpu"></td>
         </tr>
     </table>
+
+    <!-- prompt that shows current game status and prompts user to make next move -->
         <div id="prompt">pick one</div>
         
 
